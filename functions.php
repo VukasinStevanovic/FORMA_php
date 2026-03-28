@@ -47,47 +47,39 @@ function prikazati_flash() {
 }
 
 function slati_email($do_adrese, $naslov, $html_telo) {
-    $autoload = ROOT_PATH . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+    $api_token = '165eea0c-3f80-43cb-8fe8-21e6ade1e515';
 
-    if (!file_exists($autoload)) {
-        error_log("Forma Fitness: PHPMailer nije instaliran. Email NIJE poslat na: {$do_adrese}");
-        error_log("Forma Fitness: Naslov: {$naslov}");
+    $data = json_encode([
+        'From'          => 'Forma Fitness <vukasinstevanovic7@gmail.com>',
+        'To'            => $do_adrese,
+        'Subject'       => $naslov,
+        'HtmlBody'      => $html_telo,
+        'TextBody'      => strip_tags($html_telo),
+        'MessageStream' => 'outbound',
+    ]);
+
+    $ch = curl_init('https://api.postmarkapp.com/email');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'Accept: application/json',
+        'Content-Type: application/json',
+        'X-Postmark-Server-Token: ' . $api_token,
+    ]);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+
+    $response  = curl_exec($ch);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($http_code === 200) {
         return true;
     }
 
-    require_once $autoload;
-
-    try {
-        $mail = new PHPMailer\PHPMailer\PHPMailer(true);
-
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'vukasinstevanovic7@gmail.com';
-        $mail->Password   = 'fsxrulcjtybxcaxo';
-        $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = 465;
-        $mail->Timeout    = 10;
-
-        $mail->CharSet  = 'UTF-8';
-        $mail->Encoding = 'base64';
-
-        $mail->setFrom('vukasinstevanovic7@gmail.com', 'Forma Fitness Gym');
-        $mail->addAddress($do_adrese);
-
-        $mail->isHTML(true);
-        $mail->Subject = $naslov;
-        $mail->Body    = $html_telo;
-        $mail->AltBody = strip_tags($html_telo);
-
-        $mail->send();
-        return true;
-
-    } catch (Exception $e) {
-        error_log('Forma Fitness email greška: ' . $mail->ErrorInfo);
-        file_put_contents(ROOT_PATH . 'email_debug.txt', date('Y-m-d H:i:s') . ' | ' . $mail->ErrorInfo . "\n", FILE_APPEND);
-        return false;
-    }
+    error_log('Forma Fitness email greška: HTTP ' . $http_code . ' | ' . $response);
+    file_put_contents(ROOT_PATH . 'email_debug.txt', date('Y-m-d H:i:s') . " | HTTP $http_code | $response\n", FILE_APPEND);
+    return false;
 }
 
 function email_aktivacija($ime, $link) {
