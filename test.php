@@ -1,2 +1,3 @@
 <?php
-var_dump($_SERVER['MYSQLHOST'] ?? 'nema');
+require_once 'konekcija.php';
+echo 'Konekcija OK';
