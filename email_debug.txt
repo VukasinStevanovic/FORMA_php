@@ -1,0 +1,3 @@
+2026-03-28 21:27:05 | Invalid address:  (From): noreply@forma_fitness.rs
+2026-03-28 21:28:30 | SMTP Error: Could not authenticate.
+2026-03-28 21:43:39 | Invalid address:  (to): admin@forma_fitness.rs

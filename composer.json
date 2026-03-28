@@ -1,0 +1,10 @@
+{
+    "name": "forma_fitness/web",
+    "description": "Forma Fitness gym sajt - studentski projekat",
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
