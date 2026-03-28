@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>" . nl2br(e($poruka)) . "</p>
         </div>";
 
-        slati_email('admin@forma_fitness.rs', 'Nova poruka: ' . $naslov, $email_telo);
+        slati_email('vukasinstevanovic7@gmail.com', 'Nova poruka: ' . $naslov, $email_telo);
 
         postaviti_flash('uspeh', 'Poruka je uspešno poslata! Odgovorićemo vam u roku od 24 sata.');
         preusmeriti(BASE_URL . '/kontakt.php');
