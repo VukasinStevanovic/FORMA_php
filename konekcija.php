@@ -3,14 +3,14 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-define('DB_HOST',    getenv('MYSQLHOST') ?: 'localhost');
-define('DB_PORT',    getenv('MYSQLPORT') ?: '3306');
-define('DB_NAME',    getenv('MYSQLDATABASE') ?: 'forma_fitness_db');
-define('DB_USER',    getenv('MYSQLUSER') ?: 'root');
-define('DB_PASS',    getenv('MYSQLPASSWORD') ?: '');
+define('DB_HOST',    'gondola.proxy.rlwy.net');
+define('DB_PORT',    '31986');
+define('DB_NAME',    'railway');
+define('DB_USER',    'root');
+define('DB_PASS',    'gfCjSoYuYgNjwqYVlqfOMyvIebHWYfUg');
 define('DB_CHARSET', 'utf8mb4');
 
-define('BASE_URL', getenv('MYSQLHOST') ? '' : '/forma_fitness');
+define('BASE_URL', '');
 
 define('ROOT_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 
