@@ -3,20 +3,21 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-define('DB_HOST',    'localhost');
-define('DB_NAME',    'forma_fitness_db');
+define('DB_HOST',    'gondola.proxy.rlwy.net');
+define('DB_PORT',    '31986');
+define('DB_NAME',    'railway');
 define('DB_USER',    'root');
-define('DB_PASS',    '');
+define('DB_PASS',    'gfCjSoYuYgNjwqYVlqfOMyvIebHWYfUg');
 define('DB_CHARSET', 'utf8mb4');
 
-define('BASE_URL', '/forma_fitness');
+define('BASE_URL', '');
 
 define('ROOT_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 
 try {
     $dsn = sprintf(
-        'mysql:host=%s;dbname=%s;charset=%s',
-        DB_HOST, DB_NAME, DB_CHARSET
+        'mysql:host=%s;port=%s;dbname=%s;charset=%s',
+        DB_HOST, DB_PORT, DB_NAME, DB_CHARSET
     );
 
     $opcije = [
@@ -33,7 +34,7 @@ try {
     <div style="background:#1a1a1a;color:#ff6600;font-family:sans-serif;padding:40px;text-align:center;">
         <h2>&#9888; Greška konekcije</h2>
         <p style="color:#ccc;">Nije moguće povezati se sa bazom podataka.<br>
-        Proverite da li je XAMPP pokrenut i da li je baza <strong>forma_fitness_db</strong> kreirana.</p>
+        Proverite da li je baza dostupna.</p>
         <small style="color:#666;">Detalji greške su zapisani u error log.</small>
     </div>');
 }
