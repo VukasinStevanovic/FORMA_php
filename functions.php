@@ -67,6 +67,7 @@ function slati_email($do_adrese, $naslov, $html_telo) {
         $mail->Password   = 'fsxrulcjtybxcaxo';
         $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
+        $mail->Timeout    = 10;
 
         $mail->CharSet  = 'UTF-8';
         $mail->Encoding = 'base64';
