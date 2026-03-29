@@ -59,14 +59,16 @@ h1, h2, h3, h4 {
 }
 
 .nav-logo {
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--orange) !important;
     text-decoration: none !important;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
 }
 
-.nav-logo span { color: var(--text); }
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
 
 .nav-links {
     display: flex;

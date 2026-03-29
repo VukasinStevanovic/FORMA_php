@@ -31,7 +31,7 @@ require_once 'includes/header.php';
     </div>
 
     <p style="color:var(--text2);margin-bottom:30px;">
-        Svi grupni časovi su uključeni u Standardnu i Premium članarinu. Kapacitet je ograničen — prijavite se na vreme!
+        Kapacitet je ograničen — prijavite se na vreme!
     </p>
 
     <?php if (empty($casovi)): ?>

@@ -10,9 +10,6 @@ $vezbe = $stmt->fetchAll();
 $stmt = $pdo->query('SELECT id, ime, prezime, specijalnost, slika FROM treneri LIMIT 3');
 $treneri = $stmt->fetchAll();
 
-$stmt = $pdo->query('SELECT naziv, cena, trajanje_dana, opis FROM clanarine WHERE aktivan = 1 ORDER BY cena ASC');
-$clanarine = $stmt->fetchAll();
-
 require_once 'includes/header.php';
 ?>
 
@@ -21,32 +18,10 @@ require_once 'includes/header.php';
     <p>Moderan gym u srcu Beograda. Iskusni treneri, vrhunska oprema i baza od 100+ vežbi na jednom mestu.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
         <a href="<?= BASE_URL ?>/vezbe.php" class="btn btn-primary btn-lg">Istraži vežbe</a>
-        <a href="<?= BASE_URL ?>/clanarine.php" class="btn btn-outline btn-lg">Pogledaj cene</a>
+        <a href="<?= BASE_URL ?>/kontakt.php" class="btn btn-outline btn-lg">Kontaktiraj nas</a>
     </div>
 </section>
 
-<section style="background:var(--bg2);border-bottom:1px solid var(--border);padding:30px 20px;">
-    <div style="max-width:1100px;margin:0 auto;">
-        <div class="grid-4">
-            <div style="text-align:center;padding:10px;">
-                <div style="font-size:36px;font-weight:800;color:var(--orange);">500+</div>
-                <p style="color:var(--text2);font-size:14px;">Aktivnih članova</p>
-            </div>
-            <div style="text-align:center;padding:10px;">
-                <div style="font-size:36px;font-weight:800;color:var(--orange);">100+</div>
-                <p style="color:var(--text2);font-size:14px;">Vežbi u bazi</p>
-            </div>
-            <div style="text-align:center;padding:10px;">
-                <div style="font-size:36px;font-weight:800;color:var(--orange);">3</div>
-                <p style="color:var(--text2);font-size:14px;">Iskusna trenera</p>
-            </div>
-            <div style="text-align:center;padding:10px;">
-                <div style="font-size:36px;font-weight:800;color:var(--orange);">5g</div>
-                <p style="color:var(--text2);font-size:14px;">U poslu</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <div class="main-content">
 
@@ -103,25 +78,6 @@ require_once 'includes/header.php';
         </div>
     </section>
 
-    <section style="margin-bottom:50px;">
-        <div class="sekcija-naslov">
-            <h2>Planovi <span>članarine</span></h2>
-            <p>Izaberite plan koji odgovara vašim ciljevima</p>
-        </div>
-        <div class="grid-3">
-            <?php foreach ($clanarine as $i => $c): ?>
-            <div class="card clanarina-card <?= $i === 1 ? 'istaknuta' : '' ?>">
-                <div class="card-body">
-                    <h3><?= e($c['naziv']) ?></h3>
-                    <div class="clanarina-cena"><?= number_format($c['cena'], 0, ',', '.') ?><span> RSD</span></div>
-                    <div class="clanarina-trajanje"><?= $c['trajanje_dana'] ?> dana</div>
-                    <p class="clanarina-opis"><?= e(skratiti_tekst($c['opis'], 100)) ?></p>
-                    <a href="<?= BASE_URL ?>/clanarine.php" class="btn btn-primary" style="width:100%;display:block;">Saznaj više</a>
-                </div>
-            </div>
-            <?php endforeach; ?>
-        </div>
-    </section>
 
     <section style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:40px;text-align:center;margin-bottom:20px;">
         <h2 style="margin-bottom:12px;">Spreman/na da počneš?</h2>

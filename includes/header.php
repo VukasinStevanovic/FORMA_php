@@ -20,7 +20,9 @@ $trenutni_url = $_SERVER['REQUEST_URI'];
 
 <nav class="navbar">
     <div class="nav-inner">
-        <a href="<?= BASE_URL ?>/index.php" class="nav-logo">FIT<span>ZONE</span></a>
+        <a href="<?= BASE_URL ?>/index.php" class="nav-logo">
+            <img src="<?= BASE_URL ?>/uploads/logo.png" alt="Forma Fitness" class="nav-logo-img">
+        </a>
 
         <button class="hamburger" id="hamburger" aria-label="Otvori meni">
             <span></span><span></span><span></span>
