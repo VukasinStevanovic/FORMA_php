@@ -14,7 +14,7 @@ $trenutni_url = $_SERVER['REQUEST_URI'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= isset($naslov_stranice) ? e($naslov_stranice) . ' | Forma Fitness' : 'Forma Fitness - Gym & Baza vežbi' ?></title>
     <link rel="stylesheet" href="<?= BASE_URL ?>/style.css">
-    <meta name="description" content="Forma Fitness gym klub - baza vežbi, raspored časova, treneri i članarine u Beogradu.">
+    <meta name="description" content="Forma Fitness gym klub - baza vežbi, raspored časova, treneri i članarine u Pančevu.">
 </head>
 <body>
 

@@ -123,16 +123,16 @@ require_once 'includes/header.php';
             <div class="p-box" style="margin-bottom:16px;">
                 <h4 style="margin-bottom:16px;">📍 Pronađite nas</h4>
                 <p style="color:var(--text2);font-size:14px;line-height:1.8;">
-                    Bulevar oslobođenja 42<br>
-                    11000 Beograd, Srbija
+                    Vladimira Žestića 29<br>
+                    26000 Pančevo, Srbija
                 </p>
             </div>
 
             <div class="p-box" style="margin-bottom:16px;">
                 <h4 style="margin-bottom:16px;">📞 Kontakt</h4>
                 <p style="color:var(--text2);font-size:14px;line-height:2;">
-                    📱 <strong>011 123 4567</strong><br>
-                    ✉️ <strong>info@forma_fitness.rs</strong>
+                    📱 <strong>+381 66 5 771171</strong><br>
+                    ✉️ <strong>vukasin.stevanovic.34.24@ict.edu.rs</strong>
                 </p>
             </div>
 
@@ -141,15 +141,15 @@ require_once 'includes/header.php';
                 <table style="width:100%;font-size:14px;">
                     <tr>
                         <td style="padding:4px 0;color:var(--text2);">Pon – Pet</td>
-                        <td style="text-align:right;"><strong>06:00 – 23:00</strong></td>
+                        <td style="text-align:right;"><strong>09:00 – 23:00</strong></td>
                     </tr>
                     <tr>
                         <td style="padding:4px 0;color:var(--text2);">Subota</td>
-                        <td style="text-align:right;"><strong>08:00 – 22:00</strong></td>
+                        <td style="text-align:right;"><strong>09:00 – 22:00</strong></td>
                     </tr>
                     <tr>
                         <td style="padding:4px 0;color:var(--text2);">Nedelja</td>
-                        <td style="text-align:right;"><strong>09:00 – 20:00</strong></td>
+                        <td style="text-align:right;"><strong>zatvoreno</strong></td>
                     </tr>
                 </table>
             </div>

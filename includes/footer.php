@@ -7,9 +7,9 @@
             <p>Dobrodošli u Forma Fitness — mesto gde se postavljaju i dostižu ciljevi.
                Moderna oprema, iskusni treneri i povoljna cena.</p>
             <p style="margin-top:10px;">
-                📍 Bulevar oslobođenja 42, Beograd<br>
-                📞 011 123 4567<br>
-                ✉️ info@forma_fitness.rs
+                📍 Vladimira Žestića 29, Pančevo<br>
+                📞 +381 66 5 771171<br>
+                ✉️ vukasin.stevanovic.34.24@ict.edu.rs
             </p>
         </div>
         <div>
@@ -27,9 +27,9 @@
         <div>
             <h4>Radno vreme</h4>
             <ul>
-                <li>Pon – Pet: 06:00 – 23:00</li>
-                <li>Subota: 08:00 – 22:00</li>
-                <li>Nedelja: 09:00 – 20:00</li>
+                <li>Pon – Pet: 09:00 – 23:00</li>
+                <li>Subota: 09:00 – 22:00</li>
+                <li>Nedelja: zatvoreno</li>
             </ul>
             <p style="margin-top:14px;">
                 <a href="<?= BASE_URL ?>/anketa.php">📊 Glasaj u anketi</a><br>

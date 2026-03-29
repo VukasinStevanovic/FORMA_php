@@ -88,8 +88,8 @@ require_once 'includes/header.php';
         <h4 style="margin-bottom:8px;">ℹ️ Napomena</h4>
         <p style="color:var(--text2);font-size:14px;">
             Raspored može biti promenjen praznikom ili tokom školskog raspusta.
-            Za tačne informacije, kontaktirajte nas na <a href="mailto:info@forma_fitness.rs">info@forma_fitness.rs</a>
-            ili pozovite <strong>011 123 4567</strong>.
+            Za tačne informacije, kontaktirajte nas na <a href="mailto:vukasin.stevanovic.34.24@ict.edu.rs">vukasin.stevanovic.34.24@ict.edu.rs</a>
+            ili pozovite <strong>+381 66 5 771171</strong>.
         </p>
     </div>
 

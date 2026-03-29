@@ -14,8 +14,8 @@ require_once 'includes/header.php';
 ?>
 
 <section class="hero">
-    <h1>Dobrodošli u <span>Forma Fitness</span></h1>
-    <p>Moderan gym u srcu Beograda. Iskusni treneri, vrhunska oprema i baza od 100+ vežbi na jednom mestu.</p>
+    <h1>Budi i ti u <span>FORMI!</span></h1>
+    <p>Moderna teretana u srcu Pančeva — čisto, bez gužve i sa besplatnim parkingom.</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
         <a href="<?= BASE_URL ?>/vezbe.php" class="btn btn-primary btn-lg">Istraži vežbe</a>
         <a href="<?= BASE_URL ?>/kontakt.php" class="btn btn-outline btn-lg">Kontaktiraj nas</a>

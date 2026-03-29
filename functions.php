@@ -92,7 +92,7 @@ function email_aktivacija($ime, $link) {
         </p>
         <p style='color:#888;font-size:12px;'>Ako niste kreirali nalog na Forma Fitness sajtu, ignorišite ovaj email.<br>Link je validan 24 sata.</p>
         <hr style='border:1px solid #333;'>
-        <p style='color:#555;font-size:11px;text-align:center;'>Forma Fitness Gym &bull; Beograd</p>
+        <p style='color:#555;font-size:11px;text-align:center;'>Forma Fitness Gym &bull; Pančevo</p>
     </div>";
 }
 
