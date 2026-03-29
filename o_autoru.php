@@ -51,11 +51,11 @@ foreach (['autor.jpg', 'autor.png', 'autor.jpeg', 'autor.webp'] as $ext) {
         <div class="p-box" style="margin-bottom:20px;">
             <h3 style="margin-bottom:12px;color:var(--orange);">O projektu</h3>
             <p style="color:var(--text2);line-height:1.8;">
-                <strong>Forma Fitness</strong> je moj web projekat koji prikazuje sajt fites kluba
+                <strong>Forma Fitness</strong> je moj web projekat koji prikazuje sajt fitness kluba
                 sa bazom vežbi, rasporedom časova, sistemom anketa i kontakt formom.
                 Sajt je radjen u proceduralnom PHP-u, bez framework-a, sa MySQL bazom podataka
                 i kompletnim admin panelom za upravljanje svim sadržajem. Planiram da vremenom ovaj projekat
-                nadogradim i sredim da se može koristiti kao oficijalni sajt fitness kluba <strong>FORMA</strong>;
+                nadogradim i sredim da se može koristiti kao oficijalni sajt fitness kluba <strong>FORMA</strong>
             </p>
         </div>
 
