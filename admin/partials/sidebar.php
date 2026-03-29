@@ -13,7 +13,6 @@ $trenutna = basename($_SERVER['PHP_SELF']);
     <a href="<?= BASE_URL ?>/admin/vezbe.php"    class="<?= $trenutna === 'vezbe.php'    ? 'active' : '' ?>">🏋️ Vežbe</a>
     <a href="<?= BASE_URL ?>/admin/casovi.php"   class="<?= $trenutna === 'casovi.php'   ? 'active' : '' ?>">📅 Časovi</a>
     <a href="<?= BASE_URL ?>/admin/treneri.php"  class="<?= $trenutna === 'treneri.php'  ? 'active' : '' ?>">👨‍💼 Treneri</a>
-    <a href="<?= BASE_URL ?>/admin/clanarine.php" class="<?= $trenutna === 'clanarine.php' ? 'active' : '' ?>">💳 Članarine</a>
 
     <div class="nav-section">Korisnici</div>
     <a href="<?= BASE_URL ?>/admin/korisnici.php" class="<?= $trenutna === 'korisnici.php' ? 'active' : '' ?>">👤 Korisnici</a>

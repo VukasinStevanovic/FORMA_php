@@ -43,7 +43,7 @@ require_once 'includes/header.php';
             <?php if ($vezba['slika']): ?>
                 <img src="<?= BASE_URL ?>/uploads/<?= e($vezba['slika']) ?>"
                      alt="<?= e($vezba['naziv']) ?>"
-                     style="width:100%;max-height:400px;object-fit:cover;border-radius:var(--radius);margin-bottom:24px;">
+                     style="width:100%;height:auto;display:block;border-radius:var(--radius);margin-bottom:24px;">
             <?php else: ?>
                 <div style="width:100%;height:280px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:72px;margin-bottom:24px;">
                     🏋️
