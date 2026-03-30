@@ -29,8 +29,8 @@ require_once 'includes/header.php';
                              alt="<?= e($t['ime'] . ' ' . $t['prezime']) ?>"
                              style="width:140px;height:140px;object-fit:cover;border-radius:50%;border:3px solid var(--orange);">
                     <?php else: ?>
-                        <div style="width:140px;height:140px;background:var(--bg3);border-radius:50%;border:3px solid var(--orange);display:flex;align-items:center;justify-content:center;font-size:48px;">
-                            👨‍💼
+                        <div style="width:140px;height:140px;background:var(--bg3);border-radius:50%;border:3px solid var(--orange);display:flex;align-items:center;justify-content:center;">
+                            <i class="<?= ($t['pol'] ?? 'm') === 'z' ? 'fa-solid fa-person-dress' : 'fa-solid fa-person' ?>" style="font-size:52px;color:var(--orange);"></i>
                         </div>
                     <?php endif; ?>
                 </div>

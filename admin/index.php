@@ -58,7 +58,7 @@ $poruke = $pdo->query('SELECT ime, email, naslov, datum, procitano FROM kontakt_
             </div>
             <div class="stat-box">
                 <span class="broj"><?= $br_casova ?></span>
-                <p>Aktivnih časova</p>
+                <p>Aktivnih treninga</p>
             </div>
         </div>
 
@@ -101,7 +101,7 @@ $poruke = $pdo->query('SELECT ime, email, naslov, datum, procitano FROM kontakt_
             <h3 style="margin-bottom:16px;">Brze akcije</h3>
             <div style="display:flex;gap:10px;flex-wrap:wrap;">
                 <a href="<?= BASE_URL ?>/admin/vezbe.php?akcija=nova" class="btn btn-primary btn-sm">+ Dodaj vežbu</a>
-                <a href="<?= BASE_URL ?>/admin/casovi.php?akcija=novi" class="btn btn-primary btn-sm">+ Dodaj čas</a>
+                <a href="<?= BASE_URL ?>/admin/treninzi.php?akcija=novi" class="btn btn-primary btn-sm">+ Dodaj trening</a>
                 <a href="<?= BASE_URL ?>/admin/treneri.php?akcija=novi" class="btn btn-primary btn-sm">+ Dodaj trenera</a>
                 <a href="<?= BASE_URL ?>/admin/ankete.php?akcija=nova" class="btn btn-primary btn-sm">+ Nova anketa</a>
                 <a href="<?= BASE_URL ?>/index.php" class="btn btn-outline btn-sm" target="_blank">Pogledaj sajt ↗</a>

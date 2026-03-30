@@ -106,8 +106,8 @@ require_once 'includes/header.php';
 
             <div class="p-box">
                 <h4 style="margin-bottom:12px;">Zainteresovani za trening?</h4>
-                <p style="color:var(--text2);font-size:13px;margin-bottom:14px;">Pogledajte naš raspored grupnih časova ili kontaktirajte trenere.</p>
-                <a href="<?= BASE_URL ?>/casovi.php" class="btn btn-primary btn-sm" style="display:block;text-align:center;margin-bottom:8px;">Raspored časova</a>
+                <p style="color:var(--text2);font-size:13px;margin-bottom:14px;">Pogledajte naš raspored grupnih treninga ili kontaktirajte trenere.</p>
+                <a href="<?= BASE_URL ?>/treninzi.php" class="btn btn-primary btn-sm" style="display:block;text-align:center;margin-bottom:8px;">Raspored treninga</a>
                 <a href="<?= BASE_URL ?>/kontakt.php" class="btn btn-outline btn-sm" style="display:block;text-align:center;">Kontaktiraj nas</a>
             </div>
         </div>

@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $prezime     = trim($_POST['prezime']       ?? '');
     $opis        = trim($_POST['opis']          ?? '');
     $specijalnost = trim($_POST['specijalnost'] ?? '');
+    $pol         = in_array($_POST['pol'] ?? '', ['m','z']) ? $_POST['pol'] : 'm';
     $edit_id     = (int)($_POST['edit_id']      ?? 0);
 
     if (strlen($ime) < 2)     $greske[] = 'Ime je obavezno.';
@@ -45,16 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $old->execute([$edit_id]);
                 $old_red = $old->fetch();
                 if ($old_red['slika']) { $put = ROOT_PATH . 'uploads/' . $old_red['slika']; if (file_exists($put)) unlink($put); }
-                $pdo->prepare('UPDATE treneri SET ime=?, prezime=?, slika=?, opis=?, specijalnost=? WHERE id=?')
-                    ->execute([$ime, $prezime, $nova_slika, $opis, $specijalnost, $edit_id]);
+                $pdo->prepare('UPDATE treneri SET ime=?, prezime=?, slika=?, opis=?, specijalnost=?, pol=? WHERE id=?')
+                    ->execute([$ime, $prezime, $nova_slika, $opis, $specijalnost, $pol, $edit_id]);
             } else {
-                $pdo->prepare('UPDATE treneri SET ime=?, prezime=?, opis=?, specijalnost=? WHERE id=?')
-                    ->execute([$ime, $prezime, $opis, $specijalnost, $edit_id]);
+                $pdo->prepare('UPDATE treneri SET ime=?, prezime=?, opis=?, specijalnost=?, pol=? WHERE id=?')
+                    ->execute([$ime, $prezime, $opis, $specijalnost, $pol, $edit_id]);
             }
             postaviti_flash('uspeh', 'Trener je ažuriran.');
         } else {
-            $pdo->prepare('INSERT INTO treneri (ime, prezime, slika, opis, specijalnost) VALUES (?,?,?,?,?)')
-                ->execute([$ime, $prezime, $nova_slika, $opis, $specijalnost]);
+            $pdo->prepare('INSERT INTO treneri (ime, prezime, slika, opis, specijalnost, pol) VALUES (?,?,?,?,?,?)')
+                ->execute([$ime, $prezime, $nova_slika, $opis, $specijalnost, $pol]);
             postaviti_flash('uspeh', 'Trener je dodan.');
         }
         header('Location: ' . BASE_URL . '/admin/treneri.php'); exit();
@@ -99,6 +100,13 @@ $treneri = $pdo->query('SELECT * FROM treneri ORDER BY ime ASC')->fetchAll();
                             <label>Prezime *</label>
                             <input type="text" name="prezime" value="<?= e($trener['prezime'] ?? '') ?>" required>
                         </div>
+                    </div>
+                    <div class="forma-group">
+                        <label>Pol</label>
+                        <select name="pol">
+                            <option value="m" <?= ($trener['pol'] ?? 'm') === 'm' ? 'selected' : '' ?>>Muško</option>
+                            <option value="z" <?= ($trener['pol'] ?? '') === 'z' ? 'selected' : '' ?>>Žensko</option>
+                        </select>
                     </div>
                     <div class="forma-group">
                         <label>Specijalnost</label>

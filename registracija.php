@@ -111,8 +111,14 @@ require_once 'includes/header.php';
 
             <div class="forma-group">
                 <label for="lozinka">Lozinka *</label>
-                <input type="password" id="lozinka" name="lozinka"
-                       placeholder="Min. 8 karaktera, 1 veliko slovo, 1 broj" required>
+                <div style="position:relative;">
+                    <input type="password" id="lozinka" name="lozinka"
+                           placeholder="Min. 8 karaktera, 1 veliko slovo, 1 broj" required style="padding-right:44px;">
+                    <button type="button" onclick="toggleLozinka('lozinka', this)"
+                            style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--text2);font-size:16px;padding:4px;">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
                 <?php if (!empty($greske['lozinka'])): ?>
                     <span class="greska-polje"><?= e($greske['lozinka']) ?></span>
                 <?php endif; ?>
@@ -121,8 +127,14 @@ require_once 'includes/header.php';
 
             <div class="forma-group">
                 <label for="lozinka2">Potvrda lozinke *</label>
-                <input type="password" id="lozinka2" name="lozinka2"
-                       placeholder="Unesite lozinku ponovo" required>
+                <div style="position:relative;">
+                    <input type="password" id="lozinka2" name="lozinka2"
+                           placeholder="Unesite lozinku ponovo" required style="padding-right:44px;">
+                    <button type="button" onclick="toggleLozinka('lozinka2', this)"
+                            style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--text2);font-size:18px;padding:4px;">
+                        👁
+                    </button>
+                </div>
                 <?php if (!empty($greske['lozinka2'])): ?>
                     <span class="greska-polje"><?= e($greske['lozinka2']) ?></span>
                 <?php endif; ?>
@@ -144,6 +156,18 @@ require_once 'includes/header.php';
 </div>
 
 <script>
+function toggleLozinka(id, btn) {
+    const input = document.getElementById(id);
+    const icon = btn.querySelector('i');
+    if (input.type === 'password') {
+        input.type = 'text';
+        icon.className = 'fa-regular fa-eye-slash';
+    } else {
+        input.type = 'password';
+        icon.className = 'fa-regular fa-eye';
+    }
+}
+
 const lozinkaInput = document.getElementById('lozinka');
 const lozinka2Input = document.getElementById('lozinka2');
 const jacBar = document.getElementById('lozinka-jac');

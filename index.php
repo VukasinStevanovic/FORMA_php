@@ -84,7 +84,7 @@ require_once 'includes/header.php';
         <p style="color:var(--text2);margin-bottom:24px;">Javi nam se i saznaj sve što te zanima o našem klubu</p>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
             <a href="<?= BASE_URL ?>/kontakt.php" class="btn btn-primary">Kontaktiraj nas</a>
-            <a href="<?= BASE_URL ?>/casovi.php" class="btn btn-outline">Raspored časova</a>
+            <a href="<?= BASE_URL ?>/treninzi.php" class="btn btn-outline">Raspored treninga</a>
         </div>
     </section>
 

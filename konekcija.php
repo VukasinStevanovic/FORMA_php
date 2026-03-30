@@ -28,6 +28,12 @@ try {
 
     $pdo = new PDO($dsn, DB_USER, DB_PASS, $opcije);
 
+    // Migracija: dodati pol kolonu u treneri ako ne postoji
+    $pdo->exec("ALTER TABLE treneri ADD COLUMN IF NOT EXISTS pol ENUM('m','z') NOT NULL DEFAULT 'm'");
+
+    // Migracija: ažurirati meni stavku za casovi -> treninzi
+    $pdo->exec("UPDATE meni_stavke SET naziv='Treninzi', url='/treninzi.php' WHERE url LIKE '%casovi%'");
+
 } catch (PDOException $e) {
     error_log('Forma Fitness DB greška: ' . $e->getMessage());
     die('

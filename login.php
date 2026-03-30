@@ -63,8 +63,14 @@ require_once 'includes/header.php';
 
             <div class="forma-group">
                 <label for="lozinka">Lozinka</label>
-                <input type="password" id="lozinka" name="lozinka"
-                       placeholder="••••••••" required>
+                <div style="position:relative;">
+                    <input type="password" id="lozinka" name="lozinka"
+                           placeholder="••••••••" required style="padding-right:44px;">
+                    <button type="button" onclick="toggleLozinka('lozinka', this)"
+                            style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--text2);font-size:16px;padding:4px;">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
             </div>
 
             <div style="margin-top:24px;">
@@ -80,5 +86,19 @@ require_once 'includes/header.php';
         </p>
     </div>
 </div>
+
+<script>
+function toggleLozinka(id, btn) {
+    const input = document.getElementById(id);
+    const icon = btn.querySelector('i');
+    if (input.type === 'password') {
+        input.type = 'text';
+        icon.className = 'fa-regular fa-eye-slash';
+    } else {
+        input.type = 'password';
+        icon.className = 'fa-regular fa-eye';
+    }
+}
+</script>
 
 <?php require_once 'includes/footer.php'; ?>
