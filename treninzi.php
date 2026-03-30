@@ -48,7 +48,7 @@ require_once 'includes/header.php';
             <div style="margin-bottom:32px;">
                 <h2 style="font-size:20px;padding-bottom:8px;border-bottom:2px solid var(--orange);margin-bottom:16px;display:flex;align-items:center;gap:10px;">
                     <span style="background:var(--orange);color:#fff;border-radius:50%;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">
-                        <?= substr($dan, 0, 1) ?>
+                        <?= mb_substr($dan, 0, 1, 'UTF-8') ?>
                     </span>
                     <?= e($dan) ?>
                 </h2>
