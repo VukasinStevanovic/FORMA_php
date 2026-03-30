@@ -36,7 +36,7 @@ require_once 'includes/header.php';
 
     <?php if (empty($casovi)): ?>
         <div style="text-align:center;padding:60px;color:var(--text2);">
-            <div style="font-size:48px;margin-bottom:16px;">📅</div>
+            <div style="font-size:48px;margin-bottom:16px;"><i class="fa-solid fa-calendar-days" style="color:var(--orange);"></i></div>
             <h3>Trenutno nema dostupnih treninga.</h3>
             <p>Proverite ponovo uskoro.</p>
         </div>
@@ -59,7 +59,7 @@ require_once 'includes/header.php';
                         <h3><?= e($cas['naziv']) ?></h3>
                         <?php if ($cas['trener_ime']): ?>
                             <p style="margin-bottom:8px;">
-                                👨‍💼 Trener:
+                                <i class="fa-solid fa-user-tie" style="color:var(--orange);"></i> Trener:
                                 <a href="<?= BASE_URL ?>/treneri.php" style="color:var(--orange);">
                                     <?= e($cas['trener_ime']) ?>
                                 </a>
@@ -67,7 +67,7 @@ require_once 'includes/header.php';
                         <?php endif; ?>
                         <p><?= e($cas['opis']) ?></p>
                         <p style="margin-top:8px;font-size:13px;color:var(--text3);">
-                            👥 Kapacitet: <?= $cas['kapacitet'] ?> mesta
+                            <i class="fa-solid fa-users" style="color:var(--orange);"></i> Kapacitet: <?= $cas['kapacitet'] ?> mesta
                         </p>
                     </div>
                     <div style="text-align:right;flex-shrink:0;">
@@ -85,7 +85,7 @@ require_once 'includes/header.php';
     <?php endif; ?>
 
     <div class="p-box mt-3" style="border-left:3px solid var(--orange);">
-        <h4 style="margin-bottom:8px;">ℹ️ Napomena</h4>
+        <h4 style="margin-bottom:8px;"><i class="fa-solid fa-circle-info" style="color:var(--orange);"></i> Napomena</h4>
         <p style="color:var(--text2);font-size:14px;">
             Raspored može biti promenjen praznikom ili tokom školskog raspusta.
             Za tačne informacije, kontaktirajte nas na <a href="mailto:vukasin.stevanovic.34.24@ict.edu.rs">vukasin.stevanovic.34.24@ict.edu.rs</a>

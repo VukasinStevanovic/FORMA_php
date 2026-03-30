@@ -43,7 +43,7 @@ require_once 'includes/header.php';
     <div class="forma-wrap" style="text-align:center;padding:40px;">
 
         <?php if ($status === 'uspeh'): ?>
-            <div style="font-size:64px;margin-bottom:16px;">✅</div>
+            <div style="font-size:64px;margin-bottom:16px;"><i class="fa-solid fa-circle-check" style="color:#27ae60;"></i></div>
             <h2 style="color:var(--orange);margin-bottom:12px;">Nalog aktiviran!</h2>
             <p style="color:var(--text2);margin-bottom:24px;">
                 Dobrodošao/la, <strong><?= e($ime_korisnika) ?></strong>!<br>
@@ -52,13 +52,13 @@ require_once 'includes/header.php';
             <a href="<?= BASE_URL ?>/login.php" class="btn btn-primary">Prijavi se</a>
 
         <?php elseif ($status === 'vec_aktiviran'): ?>
-            <div style="font-size:64px;margin-bottom:16px;">ℹ️</div>
+            <div style="font-size:64px;margin-bottom:16px;"><i class="fa-solid fa-circle-info" style="color:var(--orange);"></i></div>
             <h2 style="margin-bottom:12px;">Nalog je već aktivan</h2>
             <p style="color:var(--text2);margin-bottom:24px;">Vaš nalog je već aktiviran. Možete se prijaviti.</p>
             <a href="<?= BASE_URL ?>/login.php" class="btn btn-primary">Prijavi se</a>
 
         <?php elseif ($status === 'istekao'): ?>
-            <div style="font-size:64px;margin-bottom:16px;">⏰</div>
+            <div style="font-size:64px;margin-bottom:16px;"><i class="fa-solid fa-clock" style="color:#e74c3c;"></i></div>
             <h2 style="color:#e74c3c;margin-bottom:12px;">Link je istekao</h2>
             <p style="color:var(--text2);margin-bottom:24px;">
                 Aktivacioni link je validan samo 24 sata.<br>
@@ -67,7 +67,7 @@ require_once 'includes/header.php';
             <a href="<?= BASE_URL ?>/registracija.php" class="btn btn-outline">Registruj se ponovo</a>
 
         <?php else: ?>
-            <div style="font-size:64px;margin-bottom:16px;">❌</div>
+            <div style="font-size:64px;margin-bottom:16px;"><i class="fa-solid fa-circle-xmark" style="color:#e74c3c;"></i></div>
             <h2 style="color:#e74c3c;margin-bottom:12px;">Nevalidan link</h2>
             <p style="color:var(--text2);margin-bottom:24px;">
                 Aktivacioni link nije validan.<br>

@@ -71,7 +71,7 @@ require_once 'includes/header.php';
 <div class="main-content">
 
     <div class="profil-header">
-        <div class="profil-avatar">👤</div>
+        <div class="profil-avatar"><i class="fa-solid fa-circle-user" style="font-size:64px;color:var(--orange);"></i></div>
         <div>
             <h1><?= e($korisnik['ime'] . ' ' . $korisnik['prezime']) ?></h1>
             <p style="color:var(--text2);"><?= e($korisnik['email']) ?></p>

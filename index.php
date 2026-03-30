@@ -37,7 +37,7 @@ require_once 'includes/header.php';
                     <?php if ($v['slika']): ?>
                         <img src="<?= BASE_URL ?>/uploads/<?= e($v['slika']) ?>" alt="<?= e($v['naziv']) ?>" class="card-img" style="height:180px;object-fit:cover;">
                     <?php else: ?>
-                        <div class="placeholder-img">🏋️</div>
+                        <div class="placeholder-img" style="display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-dumbbell" style="font-size:32px;color:var(--orange);"></i></div>
                     <?php endif; ?>
                     <div class="card-body">
                         <h3><?= e($v['naziv']) ?></h3>

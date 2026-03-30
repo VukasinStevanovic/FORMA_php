@@ -45,8 +45,8 @@ require_once 'includes/header.php';
                      alt="<?= e($vezba['naziv']) ?>"
                      style="width:100%;height:auto;display:block;border-radius:var(--radius);margin-bottom:24px;">
             <?php else: ?>
-                <div style="width:100%;height:280px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:72px;margin-bottom:24px;">
-                    🏋️
+                <div style="width:100%;height:280px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+                    <i class="fa-solid fa-dumbbell" style="font-size:72px;color:var(--orange);"></i>
                 </div>
             <?php endif; ?>
 
@@ -99,7 +99,7 @@ require_once 'includes/header.php';
 
             <?php if ($vezba['tezina'] === 'tesko'): ?>
             <div class="p-box" style="border-left:3px solid #e74c3c;margin-bottom:20px;">
-                <h4 style="color:#e74c3c;margin-bottom:8px;">⚠️ Napredna vežba</h4>
+                <h4 style="color:#e74c3c;margin-bottom:8px;"><i class="fa-solid fa-triangle-exclamation"></i> Napredna vežba</h4>
                 <p style="color:var(--text2);font-size:13px;">Ova vežba zahteva dobru tehničku pripremu. Preporučujemo da je izvodite pod nadzorom iskusnog trenera, posebno pri prvim pokušajima.</p>
             </div>
             <?php endif; ?>
@@ -124,7 +124,7 @@ require_once 'includes/header.php';
                     <?php if ($s['slika']): ?>
                         <img src="<?= BASE_URL ?>/uploads/<?= e($s['slika']) ?>" alt="<?= e($s['naziv']) ?>" style="width:100%;height:140px;object-fit:cover;">
                     <?php else: ?>
-                        <div class="placeholder-img" style="height:140px;font-size:32px;">🏋️</div>
+                        <div class="placeholder-img" style="height:140px;display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-dumbbell" style="font-size:32px;color:var(--orange);"></i></div>
                     <?php endif; ?>
                     <div class="card-body">
                         <h3 style="font-size:15px;"><?= e($s['naziv']) ?></h3>

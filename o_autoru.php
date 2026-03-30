@@ -29,8 +29,8 @@ foreach (['autor.jpg', 'autor.png', 'autor.jpeg', 'autor.webp'] as $ext) {
                     <img src="<?= $slika_path ?>" alt="Vukašin Stevanović"
                          style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid var(--orange);display:block;">
                 <?php else: ?>
-                    <div style="width:160px;height:160px;background:var(--bg3);border:3px solid var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:64px;">
-                        👤
+                    <div style="width:160px;height:160px;background:var(--bg3);border:3px solid var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                        <i class="fa-solid fa-circle-user" style="font-size:64px;color:var(--orange);"></i>
                     </div>
                 <?php endif; ?>
             </div>

@@ -81,7 +81,7 @@ require_once 'includes/header.php';
 
     <?php if (empty($vezbe)): ?>
         <div style="text-align:center;padding:60px 20px;color:var(--text2);">
-            <div style="font-size:48px;margin-bottom:16px;">🔍</div>
+            <div style="font-size:48px;margin-bottom:16px;"><i class="fa-solid fa-magnifying-glass" style="color:var(--orange);"></i></div>
             <h3>Nema rezultata</h3>
             <p>Pokušajte sa drugom pretragom ili resetujte filtere.</p>
             <a href="<?= BASE_URL ?>/vezbe.php" class="btn btn-outline mt-2">Prikaži sve vežbe</a>
@@ -99,7 +99,7 @@ require_once 'includes/header.php';
                              alt="<?= e($v['naziv']) ?>"
                              style="width:100%;height:180px;object-fit:cover;">
                     <?php else: ?>
-                        <div class="placeholder-img">🏋️</div>
+                        <div class="placeholder-img" style="display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-dumbbell" style="font-size:32px;color:var(--orange);"></i></div>
                     <?php endif; ?>
                     <div class="card-body">
                         <h3 style="margin-bottom:8px;"><?= e($v['naziv']) ?></h3>

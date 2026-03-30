@@ -78,7 +78,7 @@ require_once 'includes/header.php';
 <div class="main-content">
 
     <div class="page-naslov">
-        <h1>📊 <span>Ankete</span></h1>
+        <h1><i class="fa-solid fa-chart-pie" style="color:var(--orange);"></i> <span>Ankete</span></h1>
     </div>
 
     <p style="color:var(--text2);margin-bottom:30px;">
@@ -87,7 +87,7 @@ require_once 'includes/header.php';
 
     <?php if (empty($ankete)): ?>
         <div style="text-align:center;padding:60px;color:var(--text2);">
-            <div style="font-size:48px;margin-bottom:16px;">📋</div>
+            <div style="font-size:48px;margin-bottom:16px;"><i class="fa-solid fa-clipboard-list" style="color:var(--orange);"></i></div>
             <h3>Trenutno nema aktivnih anketa.</h3>
             <p>Proverite ponovo uskoro!</p>
         </div>
