@@ -29,6 +29,7 @@ $trenutna = basename($_SERVER['PHP_SELF']);
     <a href="<?= BASE_URL ?>/logout.php" style="color:#e74c3c;"><i class="fa-solid fa-right-from-bracket" style="width:18px;text-align:center;color:#e74c3c;"></i> Odjava</a>
 </aside>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 .si { color: var(--orange); width: 18px; text-align: center; display: inline-block; }
 </style>
