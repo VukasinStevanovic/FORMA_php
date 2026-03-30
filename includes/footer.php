@@ -3,13 +3,13 @@
 <footer class="footer">
     <div class="footer-inner">
         <div>
-            <h4>🏋️ Forma Fitness Gym</h4>
+            <h4><i class="fa-solid fa-dumbbell" style="color:var(--orange);"></i> Forma Fitness Gym</h4>
             <p>Dobrodošli u Forma Fitness — mesto gde se postavljaju i dostižu ciljevi.
                Moderna oprema, iskusni treneri i povoljna cena.</p>
             <p style="margin-top:10px;">
-                📍 Vladimira Žestića 29, Pančevo<br>
-                📞 +381 66 5 771171<br>
-                ✉️ vukasin.stevanovic.34.24@ict.edu.rs
+                <i class="fa-solid fa-location-dot" style="color:var(--orange);"></i> Vladimira Žestića 29, Pančevo<br>
+                <i class="fa-solid fa-phone" style="color:var(--orange);"></i> +381 66 5 771171<br>
+                <i class="fa-solid fa-envelope" style="color:var(--orange);"></i> vukasin.stevanovic.34.24@ict.edu.rs
             </p>
         </div>
         <div>
@@ -32,8 +32,8 @@
                 <li>Nedelja: zatvoreno</li>
             </ul>
             <p style="margin-top:14px;">
-                <a href="<?= BASE_URL ?>/anketa.php">📊 Glasaj u anketi</a><br>
-                <a href="<?= BASE_URL ?>/o_autoru.php" style="margin-top:4px;display:inline-block;">ℹ️ O autoru</a>
+                <a href="<?= BASE_URL ?>/anketa.php"><i class="fa-solid fa-chart-pie" style="color:var(--orange);"></i> Glasaj u anketi</a><br>
+                <a href="<?= BASE_URL ?>/o_autoru.php" style="margin-top:4px;display:inline-block;"><i class="fa-solid fa-circle-info" style="color:var(--orange);"></i> O autoru</a>
             </p>
         </div>
     </div>

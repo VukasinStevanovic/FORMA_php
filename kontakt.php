@@ -121,7 +121,7 @@ require_once 'includes/header.php';
 
         <div>
             <div class="p-box" style="margin-bottom:16px;">
-                <h4 style="margin-bottom:16px;">📍 Pronađite nas</h4>
+                <h4 style="margin-bottom:16px;"><i class="fa-solid fa-location-dot" style="color:var(--orange);"></i> Pronađite nas</h4>
                 <p style="color:var(--text2);font-size:14px;line-height:1.8;">
                     Vladimira Žestića 29<br>
                     26000 Pančevo, Srbija
@@ -129,15 +129,15 @@ require_once 'includes/header.php';
             </div>
 
             <div class="p-box" style="margin-bottom:16px;">
-                <h4 style="margin-bottom:16px;">📞 Kontakt</h4>
+                <h4 style="margin-bottom:16px;"><i class="fa-solid fa-phone" style="color:var(--orange);"></i> Kontakt</h4>
                 <p style="color:var(--text2);font-size:14px;line-height:2;">
-                    📱 <strong>+381 66 5 771171</strong><br>
-                    ✉️ <strong>vukasin.stevanovic.34.24@ict.edu.rs</strong>
+                    <i class="fa-solid fa-mobile-screen" style="color:var(--orange);"></i> <strong>+381 66 5 771171</strong><br>
+                    <i class="fa-solid fa-envelope" style="color:var(--orange);"></i> <strong>vukasin.stevanovic.34.24@ict.edu.rs</strong>
                 </p>
             </div>
 
             <div class="p-box" style="margin-bottom:16px;">
-                <h4 style="margin-bottom:16px;">🕐 Radno vreme</h4>
+                <h4 style="margin-bottom:16px;"><i class="fa-solid fa-clock" style="color:var(--orange);"></i> Radno vreme</h4>
                 <table style="width:100%;font-size:14px;">
                     <tr>
                         <td style="padding:4px 0;color:var(--text2);">Pon – Pet</td>
@@ -155,7 +155,7 @@ require_once 'includes/header.php';
             </div>
 
             <div class="p-box">
-                <h4 style="margin-bottom:8px;">⏱️ Vreme odgovora</h4>
+                <h4 style="margin-bottom:8px;"><i class="fa-solid fa-hourglass-half" style="color:var(--orange);"></i> Vreme odgovora</h4>
                 <p style="color:var(--text2);font-size:13px;">Odgovaramo na sve upite u roku od 24 sata radnim danima.</p>
             </div>
         </div>

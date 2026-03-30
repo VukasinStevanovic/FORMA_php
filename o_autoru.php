@@ -36,8 +36,8 @@ foreach (['autor.jpg', 'autor.png', 'autor.jpeg', 'autor.webp'] as $ext) {
             </div>
 
             <div style="flex:1;min-width:220px;">
-                <h2 style="font-size:24px;margin-bottom:6px;">Vukašin Stevanović</h2>
-                <p style="color:var(--orange);font-weight:600;margin-bottom:16px;">Student – Visoka ICT škola, Beograd</p>
+                <h2 style="font-size:24px;margin-bottom:6px;">Vukašin Stevanović 34/24</h2>
+                <p style="color:var(--orange);font-weight:600;margin-bottom:16px;">Student - Visoka ICT škola, Beograd</p>
 
                 <p style="color:var(--text2);line-height:1.8;">
                     Student Visoke ICT škole Beogradu, IT smer, 2. godina. Imam veliku strast prema
