@@ -8,7 +8,7 @@ $trenutna = basename($_SERVER['PHP_SELF']);
 
     <a href="<?= BASE_URL ?>/admin/"
        class="<?= $trenutna === 'index.php' && strpos($_SERVER['REQUEST_URI'], '/admin/') !== false ? 'active' : '' ?>">
-        <i class="fa-solid fa-gauge-high si"></i> Dashboard
+        <i class="fa-solid fa-chart-column si"></i> Dashboard
     </a>
 
     <div class="nav-section">Sadržaj</div>

@@ -23,7 +23,7 @@ $korisnici = $pdo->query('SELECT id, ime, prezime, email, uloga, aktivan, datum_
 <div class="admin-layout">
     <?php include 'partials/sidebar.php'; ?>
     <main class="admin-main">
-        <h1>👤 Korisnici</h1>
+        <h1><i class="fa-solid fa-users si"></i> Korisnici</h1>
         <?= prikazati_flash() ?>
 
         <p style="color:var(--text2);margin-bottom:20px;">Ukupno: <strong><?= count($korisnici) ?></strong> korisnika</p>

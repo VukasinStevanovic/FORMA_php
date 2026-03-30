@@ -68,7 +68,7 @@ if ($akcija === 'statistika' && $id > 0) {
 <div class="admin-layout">
     <?php include 'partials/sidebar.php'; ?>
     <main class="admin-main">
-        <h1>📊 Ankete</h1>
+        <h1><i class="fa-solid fa-chart-pie si"></i> Ankete</h1>
         <?= prikazati_flash() ?>
         <?php foreach ($greske as $g): ?><div class="flash-poruka flash-greska"><?= e($g) ?></div><?php endforeach; ?>
 

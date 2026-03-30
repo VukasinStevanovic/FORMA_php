@@ -41,7 +41,7 @@ $poruke = $pdo->query('SELECT id, ime, email, naslov, datum, procitano FROM kont
 <div class="admin-layout">
     <?php include 'partials/sidebar.php'; ?>
     <main class="admin-main">
-        <h1>✉️ Kontakt poruke</h1>
+        <h1><i class="fa-solid fa-envelope si"></i> Kontakt poruke</h1>
         <?= prikazati_flash() ?>
 
         <?php if ($detalj): ?>

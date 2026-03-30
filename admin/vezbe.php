@@ -99,7 +99,7 @@ $vezbe = $pdo->query('SELECT id, naziv, grupa_misica, tezina, tip_vezbe, datum_d
     <?php include 'partials/sidebar.php'; ?>
     <main class="admin-main">
 
-        <h1><?= ($akcija === 'nova' || $akcija === 'izmeni') ? ($akcija === 'nova' ? 'Nova vežba' : 'Izmeni vežbu') : '🏋️ Vežbe' ?></h1>
+        <h1><?= ($akcija === 'nova' || $akcija === 'izmeni') ? ($akcija === 'nova' ? 'Nova vežba' : 'Izmeni vežbu') : '<i class="fa-solid fa-dumbbell si"></i> Vežbe' ?></h1>
 
         <?= prikazati_flash() ?>
         <?php foreach ($greske as $g): ?>

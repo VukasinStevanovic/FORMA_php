@@ -63,7 +63,7 @@ $stavke = $pdo->query('SELECT * FROM meni_stavke ORDER BY pozicija ASC, id ASC')
 <div class="admin-layout">
     <?php include 'partials/sidebar.php'; ?>
     <main class="admin-main">
-        <h1>☰ Upravljanje menijem</h1>
+        <h1><i class="fa-solid fa-bars si"></i> Upravljanje menijem</h1>
         <?= prikazati_flash() ?>
         <?php foreach ($greske as $g): ?><div class="flash-poruka flash-greska"><?= e($g) ?></div><?php endforeach; ?>
 

@@ -28,7 +28,7 @@ $poruke = $pdo->query('SELECT ime, email, naslov, datum, procitano FROM kontakt_
     <?php include 'partials/sidebar.php'; ?>
 
     <main class="admin-main">
-        <h1>📊 Dashboard</h1>
+        <h1><i class="fa-solid fa-chart-column si"></i> Dashboard</h1>
 
         <?= prikazati_flash() ?>
 

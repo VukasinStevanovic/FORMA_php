@@ -69,7 +69,7 @@ $dani    = ['Ponedeljak','Utorak','Sreda','Četvrtak','Petak','Subota','Nedelja'
 <div class="admin-layout">
     <?php include 'partials/sidebar.php'; ?>
     <main class="admin-main">
-        <h1><?= in_array($akcija, ['novi','izmeni']) ? ($akcija === 'novi' ? 'Novi trening' : 'Izmeni trening') : '📅 Treninzi' ?></h1>
+        <h1><?= in_array($akcija, ['novi','izmeni']) ? ($akcija === 'novi' ? 'Novi trening' : 'Izmeni trening') : '<i class="fa-solid fa-calendar-days si"></i> Treninzi' ?></h1>
         <?= prikazati_flash() ?>
         <?php foreach ($greske as $g): ?><div class="flash-poruka flash-greska"><?= e($g) ?></div><?php endforeach; ?>
 

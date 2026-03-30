@@ -82,7 +82,7 @@ $treneri = $pdo->query('SELECT * FROM treneri ORDER BY ime ASC')->fetchAll();
 <div class="admin-layout">
     <?php include 'partials/sidebar.php'; ?>
     <main class="admin-main">
-        <h1><?= in_array($akcija, ['novi','izmeni']) ? ($akcija === 'novi' ? 'Novi trener' : 'Izmeni trenera') : '👨‍💼 Treneri' ?></h1>
+        <h1><?= in_array($akcija, ['novi','izmeni']) ? ($akcija === 'novi' ? 'Novi trener' : 'Izmeni trenera') : '<i class="fa-solid fa-user-tie si"></i> Treneri' ?></h1>
         <?= prikazati_flash() ?>
         <?php foreach ($greske as $g): ?><div class="flash-poruka flash-greska"><?= e($g) ?></div><?php endforeach; ?>
 
@@ -146,7 +146,7 @@ $treneri = $pdo->query('SELECT * FROM treneri ORDER BY ime ASC')->fetchAll();
                                 <?php if ($t['slika']): ?>
                                     <img src="<?= BASE_URL ?>/uploads/<?= e($t['slika']) ?>" style="width:45px;height:45px;object-fit:cover;border-radius:50%;">
                                 <?php else: ?>
-                                    <div style="width:45px;height:45px;background:var(--bg3);border-radius:50%;display:flex;align-items:center;justify-content:center;">👤</div>
+                                    <div style="width:45px;height:45px;background:var(--bg3);border-radius:50%;display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-user" style="color:var(--orange);"></i></div>
                                 <?php endif; ?>
                             </td>
                             <td><strong><?= e($t['ime'] . ' ' . $t['prezime']) ?></strong></td>
