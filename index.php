@@ -7,7 +7,7 @@ $naslov_stranice = 'Početna';
 $stmt = $pdo->query('SELECT id, naziv, grupa_misica, tezina, slika FROM vezbe ORDER BY datum_dodavanja DESC LIMIT 3');
 $vezbe = $stmt->fetchAll();
 
-$stmt = $pdo->query('SELECT id, ime, prezime, specijalnost, slika FROM treneri LIMIT 3');
+$stmt = $pdo->query('SELECT id, ime, prezime, specijalnost, slika, pol FROM treneri LIMIT 3');
 $treneri = $stmt->fetchAll();
 
 require_once 'includes/header.php';
@@ -64,7 +64,9 @@ require_once 'includes/header.php';
                 <?php if ($t['slika']): ?>
                     <img src="<?= BASE_URL ?>/uploads/<?= e($t['slika']) ?>" alt="<?= e($t['ime']) ?>" class="card-img" style="height:200px;object-fit:cover;">
                 <?php else: ?>
-                    <div class="card-img">👨‍💼</div>
+                    <div class="card-img" style="display:flex;align-items:center;justify-content:center;background:var(--bg3);">
+                        <i class="<?= ($t['pol'] ?? 'm') === 'z' ? 'fa-solid fa-person-dress' : 'fa-solid fa-person' ?>" style="font-size:52px;color:var(--orange);"></i>
+                    </div>
                 <?php endif; ?>
                 <div class="card-body">
                     <h3><?= e($t['ime'] . ' ' . $t['prezime']) ?></h3>

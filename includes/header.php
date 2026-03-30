@@ -41,7 +41,7 @@ $trenutni_url = $_SERVER['REQUEST_URI'];
         <div class="nav-right">
             <?php if (je_li_ulogovan()): ?>
                 <a href="<?= BASE_URL ?>/profil.php">
-                    👤 <?= e($_SESSION['korisnik_ime'] ?? 'Profil') ?>
+                    <i class="fa-solid fa-circle-user"></i> <?= e($_SESSION['korisnik_ime'] ?? 'Profil') ?>
                 </a>
                 <?php if (je_li_admin()): ?>
                     <a href="<?= BASE_URL ?>/admin/">Admin</a>
