@@ -75,7 +75,7 @@ require_once 'includes/header.php';
 
 <div class="main-content">
     <div class="forma-wrap" style="max-width:560px;margin-top:20px;">
-        <h2 style="text-align:center;margin-bottom:24px;">📝 Registracija</h2>
+        <h2 style="text-align:center;margin-bottom:24px;"><i class="fa-solid fa-user-plus" style="color:var(--orange);"></i> Registracija</h2>
 
         <form method="POST" action="" id="reg-forma" novalidate>
             <div class="grid-2" style="gap:12px;">
@@ -132,7 +132,7 @@ require_once 'includes/header.php';
                            placeholder="Unesite lozinku ponovo" required style="padding-right:44px;">
                     <button type="button" onclick="toggleLozinka('lozinka2', this)"
                             style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--text2);font-size:18px;padding:4px;">
-                        👁
+                        <i class="fa-regular fa-eye"></i>
                     </button>
                 </div>
                 <?php if (!empty($greske['lozinka2'])): ?>

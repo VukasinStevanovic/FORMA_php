@@ -45,7 +45,7 @@ require_once 'includes/header.php';
 
 <div class="main-content">
     <div class="forma-wrap" style="margin-top:20px;">
-        <h2 style="text-align:center;margin-bottom:24px;">🔐 Prijava</h2>
+        <h2 style="text-align:center;margin-bottom:24px;"><i class="fa-solid fa-right-to-bracket" style="color:var(--orange);"></i> Prijava</h2>
 
         <?php if (!empty($greske)): ?>
             <?php foreach ($greske as $g): ?>
