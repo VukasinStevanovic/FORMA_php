@@ -50,7 +50,7 @@ function slati_email($do_adrese, $naslov, $html_telo) {
     $api_token = '165eea0c-3f80-43cb-8fe8-21e6ade1e515';
 
     $data = json_encode([
-        'From'          => 'Forma Fitness <vukasinstevanovic7@gmail.com>',
+        'From'          => 'Forma Fitness <vukasin.stevanovic.34.24@ict.edu.rs>',
         'To'            => $do_adrese,
         'Subject'       => $naslov,
         'HtmlBody'      => $html_telo,
