@@ -92,4 +92,10 @@ require_once 'includes/header.php';
 
 </div>
 
+<div style="text-align:center;padding:16px 20px;background:var(--bg2);border-top:1px solid var(--border);">
+    <a href="<?= BASE_URL ?>/dokumentacija.html" target="_blank" style="color:var(--text3);font-size:13px;text-decoration:none;">
+        <i class="fa-solid fa-file-lines"></i> Dokumentacija
+    </a>
+</div>
+
 <?php require_once 'includes/footer.php'; ?>
